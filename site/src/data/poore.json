@@ -1,0 +1,154 @@
+[
+  {
+    "entity": "Beef (beef herd)",
+    "kgCO2ePerKg": 99.48
+  },
+  {
+    "entity": "Dark Chocolate",
+    "kgCO2ePerKg": 46.65
+  },
+  {
+    "entity": "Lamb & Mutton",
+    "kgCO2ePerKg": 39.72
+  },
+  {
+    "entity": "Beef (dairy herd)",
+    "kgCO2ePerKg": 33.3
+  },
+  {
+    "entity": "Coffee",
+    "kgCO2ePerKg": 28.53
+  },
+  {
+    "entity": "Prawns (farmed)",
+    "kgCO2ePerKg": 26.87
+  },
+  {
+    "entity": "Cheese",
+    "kgCO2ePerKg": 23.88
+  },
+  {
+    "entity": "Fish (farmed)",
+    "kgCO2ePerKg": 13.63
+  },
+  {
+    "entity": "Pig Meat",
+    "kgCO2ePerKg": 12.31
+  },
+  {
+    "entity": "Poultry Meat",
+    "kgCO2ePerKg": 9.87
+  },
+  {
+    "entity": "Eggs",
+    "kgCO2ePerKg": 4.67
+  },
+  {
+    "entity": "Rice",
+    "kgCO2ePerKg": 4.45
+  },
+  {
+    "entity": "Groundnuts",
+    "kgCO2ePerKg": 3.23
+  },
+  {
+    "entity": "Cane Sugar",
+    "kgCO2ePerKg": 3.2
+  },
+  {
+    "entity": "Tofu",
+    "kgCO2ePerKg": 3.16
+  },
+  {
+    "entity": "Milk",
+    "kgCO2ePerKg": 3.15
+  },
+  {
+    "entity": "Oatmeal",
+    "kgCO2ePerKg": 2.48
+  },
+  {
+    "entity": "Tomatoes",
+    "kgCO2ePerKg": 2.09
+  },
+  {
+    "entity": "Beet Sugar",
+    "kgCO2ePerKg": 1.81
+  },
+  {
+    "entity": "Other Pulses",
+    "kgCO2ePerKg": 1.79
+  },
+  {
+    "entity": "Wine",
+    "kgCO2ePerKg": 1.79
+  },
+  {
+    "entity": "Maize",
+    "kgCO2ePerKg": 1.7
+  },
+  {
+    "entity": "Wheat & Rye",
+    "kgCO2ePerKg": 1.57
+  },
+  {
+    "entity": "Berries & Grapes",
+    "kgCO2ePerKg": 1.53
+  },
+  {
+    "entity": "Cassava",
+    "kgCO2ePerKg": 1.32
+  },
+  {
+    "entity": "Barley",
+    "kgCO2ePerKg": 1.18
+  },
+  {
+    "entity": "Other Fruit",
+    "kgCO2ePerKg": 1.05
+  },
+  {
+    "entity": "Peas",
+    "kgCO2ePerKg": 0.98
+  },
+  {
+    "entity": "Soy milk",
+    "kgCO2ePerKg": 0.98
+  },
+  {
+    "entity": "Bananas",
+    "kgCO2ePerKg": 0.86
+  },
+  {
+    "entity": "Other Vegetables",
+    "kgCO2ePerKg": 0.53
+  },
+  {
+    "entity": "Brassicas",
+    "kgCO2ePerKg": 0.51
+  },
+  {
+    "entity": "Onions & Leeks",
+    "kgCO2ePerKg": 0.5
+  },
+  {
+    "entity": "Potatoes",
+    "kgCO2ePerKg": 0.46
+  },
+  {
+    "entity": "Apples",
+    "kgCO2ePerKg": 0.43
+  },
+  {
+    "entity": "Nuts",
+    "kgCO2ePerKg": 0.43
+  },
+  {
+    "entity": "Root Vegetables",
+    "kgCO2ePerKg": 0.43
+  },
+  {
+    "entity": "Citrus Fruit",
+    "kgCO2ePerKg": 0.39
+  }
+]

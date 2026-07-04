@@ -1,0 +1,604 @@
+[
+  {
+    "entity": "Beef (beef herd)",
+    "stages": {
+      "landUse": 23.23753584,
+      "farm": 56.22806279,
+      "animalFeed": 2.680978528,
+      "processing": 1.811083009,
+      "transport": 0.494124578,
+      "retail": 0.233537838,
+      "packaging": 0.352084451,
+      "losses": 14.43999758
+    },
+    "total": 99.477404614
+  },
+  {
+    "entity": "Dark Chocolate",
+    "stages": {
+      "landUse": 25.81483298,
+      "farm": 6.68700226,
+      "animalFeed": 0,
+      "processing": 0.333743892,
+      "transport": 0.110871398,
+      "retail": 0.037652218,
+      "packaging": 0.722433613,
+      "losses": 12.94020883
+    },
+    "total": 46.646745190999994
+  },
+  {
+    "entity": "Lamb & Mutton",
+    "stages": {
+      "landUse": 0.648246975,
+      "farm": 27.02574947,
+      "animalFeed": 3.283170334,
+      "processing": 1.539596149,
+      "transport": 0.678854295,
+      "retail": 0.300814068,
+      "packaging": 0.34760362,
+      "losses": 5.898234517
+    },
+    "total": 39.722269428000004
+  },
+  {
+    "entity": "Beef (dairy herd)",
+    "stages": {
+      "landUse": 1.266022291,
+      "farm": 21.91552941,
+      "animalFeed": 3.503673404,
+      "processing": 1.547664428,
+      "transport": 0.592409815,
+      "retail": 0.254032327,
+      "packaging": 0.374549103,
+      "losses": 3.847514644
+    },
+    "total": 33.301395422
+  },
+  {
+    "entity": "Coffee",
+    "stages": {
+      "landUse": 3.818798535,
+      "farm": 10.75444008,
+      "animalFeed": 0,
+      "processing": 0.613185194,
+      "transport": 0.134528124,
+      "retail": 0.052486794,
+      "packaging": 1.687496266,
+      "losses": 11.46697109
+    },
+    "total": 28.527906082999998
+  },
+  {
+    "entity": "Shrimps (farmed)",
+    "stages": {
+      "landUse": 0.330563074,
+      "farm": 13.45397854,
+      "animalFeed": 4.029938567,
+      "processing": 0,
+      "transport": 0.330851591,
+      "retail": 0.352361124,
+      "packaging": 0.536147297,
+      "losses": 7.832022151
+    },
+    "total": 26.865862344
+  },
+  {
+    "entity": "Cheese",
+    "stages": {
+      "landUse": 4.467476309,
+      "farm": 13.0955392,
+      "animalFeed": 2.35305756,
+      "processing": 0.740386293,
+      "transport": 0.138556663,
+      "retail": 0.333337741,
+      "packaging": 0.172090931,
+      "losses": 2.577136521
+    },
+    "total": 23.877581218
+  },
+  {
+    "entity": "Fish (farmed)",
+    "stages": {
+      "landUse": 1.194717129,
+      "farm": 8.056114834,
+      "animalFeed": 1.834420269,
+      "processing": 0.044598632,
+      "transport": 0.247958628,
+      "retail": 0.089975618,
+      "packaging": 0.137537392,
+      "losses": 2.02712264
+    },
+    "total": 13.632445142000002
+  },
+  {
+    "entity": "Pig Meat",
+    "stages": {
+      "landUse": 2.244068682,
+      "farm": 2.477097669,
+      "animalFeed": 4.298476294,
+      "processing": 0.415841843,
+      "transport": 0.501263865,
+      "retail": 0.278096013,
+      "packaging": 0.432286318,
+      "losses": 1.658551095
+    },
+    "total": 12.305681779000002
+  },
+  {
+    "entity": "Poultry Meat",
+    "stages": {
+      "landUse": 3.508428798,
+      "farm": 0.927821834,
+      "animalFeed": 2.452357033,
+      "processing": 0.607372729,
+      "transport": 0.381078302,
+      "retail": 0.243976607,
+      "packaging": 0.292702383,
+      "losses": 1.452085944
+    },
+    "total": 9.86582363
+  },
+  {
+    "entity": "Palm Oil",
+    "stages": {
+      "landUse": 2.755585078,
+      "farm": 1.875131956,
+      "animalFeed": 0,
+      "processing": 1.125325738,
+      "transport": 0.185116868,
+      "retail": 0.038737674,
+      "packaging": 0.788108048,
+      "losses": 0.548765131
+    },
+    "total": 7.316770492999999
+  },
+  {
+    "entity": "Soybean Oil",
+    "stages": {
+      "landUse": 2.866183849,
+      "farm": 1.406293945,
+      "animalFeed": 0,
+      "processing": 0.287775815,
+      "transport": 0.276950302,
+      "retail": 0.039402755,
+      "packaging": 0.786068449,
+      "losses": 0.661796404
+    },
+    "total": 6.324471519000001
+  },
+  {
+    "entity": "Olive Oil",
+    "stages": {
+      "landUse": -0.323684317,
+      "farm": 3.672172059,
+      "animalFeed": 0,
+      "processing": 0.567188828,
+      "transport": 0.414114186,
+      "retail": 0.039322364,
+      "packaging": 0.740116693,
+      "losses": 0.315646031
+    },
+    "total": 5.424875844000001
+  },
+  {
+    "entity": "Eggs",
+    "stages": {
+      "landUse": 0.710381288,
+      "farm": 1.319636556,
+      "animalFeed": 2.205012424,
+      "processing": 0,
+      "transport": 0.084063931,
+      "retail": 0.035615941,
+      "packaging": 0.16143735,
+      "losses": 0.153323463
+    },
+    "total": 4.669470952999999
+  },
+  {
+    "entity": "Rice",
+    "stages": {
+      "landUse": -0.02187964,
+      "farm": 3.553953627,
+      "animalFeed": 0,
+      "processing": 0.065220036,
+      "transport": 0.095619114,
+      "retail": 0.063362152,
+      "packaging": 0.083853899,
+      "losses": 0.611516643
+    },
+    "total": 4.4516458309999996
+  },
+  {
+    "entity": "Rapeseed Oil",
+    "stages": {
+      "landUse": 0.195574761,
+      "farm": 2.156630103,
+      "animalFeed": 0,
+      "processing": 0.177875305,
+      "transport": 0.17514717,
+      "retail": 0.042540886,
+      "packaging": 0.776637791,
+      "losses": 0.243266575
+    },
+    "total": 3.7676725909999993
+  },
+  {
+    "entity": "Sunflower Oil",
+    "stages": {
+      "landUse": 0.122421009,
+      "farm": 1.976377998,
+      "animalFeed": 0,
+      "processing": 0.210714429,
+      "transport": 0.18454226,
+      "retail": 0.039322364,
+      "packaging": 0.784464695,
+      "losses": 0.28163571
+    },
+    "total": 3.5994784650000007
+  },
+  {
+    "entity": "Groundnuts",
+    "stages": {
+      "landUse": 0.4851524,
+      "farm": 1.575954219,
+      "animalFeed": 0,
+      "processing": 0.410917506,
+      "transport": 0.132597229,
+      "retail": 0.046872605,
+      "packaging": 0.109439863,
+      "losses": 0.469079765
+    },
+    "total": 3.2300135869999997
+  },
+  {
+    "entity": "Cane Sugar",
+    "stages": {
+      "landUse": 1.263040556,
+      "farm": 0.491269852,
+      "animalFeed": 0,
+      "processing": 0.037380973,
+      "transport": 0.794510292,
+      "retail": 0.036723005,
+      "packaging": 0.084277185,
+      "losses": 0.491722295
+    },
+    "total": 3.1989241579999996
+  },
+  {
+    "entity": "Tofu",
+    "stages": {
+      "landUse": 0.958229607,
+      "farm": 0.494701474,
+      "animalFeed": 0,
+      "processing": 0.793884503,
+      "transport": 0.176925292,
+      "retail": 0.27017249,
+      "packaging": 0.177360572,
+      "losses": 0.290470423
+    },
+    "total": 3.1617443610000002
+  },
+  {
+    "entity": "Milk",
+    "stages": {
+      "landUse": 0.51222255,
+      "farm": 1.508862035,
+      "animalFeed": 0.243814063,
+      "processing": 0.154189035,
+      "transport": 0.093235401,
+      "retail": 0.265149784,
+      "packaging": 0.100180454,
+      "losses": 0.274066289
+    },
+    "total": 3.151719611
+  },
+  {
+    "entity": "Oatmeal",
+    "stages": {
+      "landUse": 0.001931697,
+      "farm": 1.872373655,
+      "animalFeed": 0,
+      "processing": 0.057838235,
+      "transport": 0.091276148,
+      "retail": 0.039322364,
+      "packaging": 0.090289045,
+      "losses": 0.327418343
+    },
+    "total": 2.4804494870000005
+  },
+  {
+    "entity": "Tomatoes",
+    "stages": {
+      "landUse": 0.372987265,
+      "farm": 0.705446792,
+      "animalFeed": 0,
+      "processing": 0.012381556,
+      "transport": 0.177110774,
+      "retail": 0.016691531,
+      "packaging": 0.145671363,
+      "losses": 0.658417374
+    },
+    "total": 2.0887066549999997
+  },
+  {
+    "entity": "Beet Sugar",
+    "stages": {
+      "landUse": 0.0000519,
+      "farm": 0.535721306,
+      "animalFeed": 0,
+      "processing": 0.241885457,
+      "transport": 0.628543902,
+      "retail": 0.039322364,
+      "packaging": 0.090289045,
+      "losses": 0.276262526
+    },
+    "total": 1.8120765
+  },
+  {
+    "entity": "Wine",
+    "stages": {
+      "landUse": -0.061264312,
+      "farm": 0.626026936,
+      "animalFeed": 0,
+      "processing": 0.138626407,
+      "transport": 0.093284143,
+      "retail": 0.039322364,
+      "packaging": 0.749231524,
+      "losses": 0.203535757
+    },
+    "total": 1.788762819
+  },
+  {
+    "entity": "Other Pulses",
+    "stages": {
+      "landUse": 0.033302446,
+      "farm": 1.08871478,
+      "animalFeed": 0,
+      "processing": 0,
+      "transport": 0.09617697,
+      "retail": 0.039322364,
+      "packaging": 0.353229974,
+      "losses": 0.17563304
+    },
+    "total": 1.786379574
+  },
+  {
+    "entity": "Maize",
+    "stages": {
+      "landUse": 0.475169036,
+      "farm": 0.717274411,
+      "animalFeed": 0,
+      "processing": 0.078319173,
+      "transport": 0.090377117,
+      "retail": 0.039312998,
+      "packaging": 0.09026754,
+      "losses": 0.210791222
+    },
+    "total": 1.7015114969999998
+  },
+  {
+    "entity": "Wheat & Rye",
+    "stages": {
+      "landUse": 0.097130028,
+      "farm": 0.820300153,
+      "animalFeed": 0,
+      "processing": 0.210128771,
+      "transport": 0.125440977,
+      "retail": 0.05604907,
+      "packaging": 0.086838974,
+      "losses": 0.17793509
+    },
+    "total": 1.573823063
+  },
+  {
+    "entity": "Berries & Grapes",
+    "stages": {
+      "landUse": 0.024600997,
+      "farm": 0.71784815,
+      "animalFeed": 0,
+      "processing": 0,
+      "transport": 0.236391771,
+      "retail": 0.017056878,
+      "packaging": 0.211092325,
+      "losses": 0.324895121
+    },
+    "total": 1.531885242
+  },
+  {
+    "entity": "Cassava",
+    "stages": {
+      "landUse": 0.589435664,
+      "farm": 0.219993617,
+      "animalFeed": 0,
+      "processing": 0,
+      "transport": 0.093597398,
+      "retail": 0.039322364,
+      "packaging": 0.044821982,
+      "losses": 0.328503936
+    },
+    "total": 1.315674961
+  },
+  {
+    "entity": "Barley",
+    "stages": {
+      "landUse": 0.00867555,
+      "farm": 0.176376721,
+      "animalFeed": 0,
+      "processing": 0.127702596,
+      "transport": 0.035351164,
+      "retail": 0.26358711,
+      "packaging": 0.496786387,
+      "losses": 0.070691954
+    },
+    "total": 1.1791714819999999
+  },
+  {
+    "entity": "Other Fruit",
+    "stages": {
+      "landUse": 0.127035306,
+      "farm": 0.372578972,
+      "animalFeed": 0,
+      "processing": 0.015557815,
+      "transport": 0.183164953,
+      "retail": 0.016432178,
+      "packaging": 0.041961205,
+      "losses": 0.296021624
+    },
+    "total": 1.0527520529999999
+  },
+  {
+    "entity": "Soy milk",
+    "stages": {
+      "landUse": 0.179971835,
+      "farm": 0.092768045,
+      "animalFeed": 0,
+      "processing": 0.162509105,
+      "transport": 0.109835191,
+      "retail": 0.27017249,
+      "packaging": 0.098395215,
+      "losses": 0.061527272
+    },
+    "total": 0.975179153
+  },
+  {
+    "entity": "Peas",
+    "stages": {
+      "landUse": 0.000118777,
+      "farm": 0.717159966,
+      "animalFeed": 0,
+      "processing": 0,
+      "transport": 0.095067089,
+      "retail": 0.039322364,
+      "packaging": 0.044821982,
+      "losses": 0.078590739
+    },
+    "total": 0.9750809169999999
+  },
+  {
+    "entity": "Bananas",
+    "stages": {
+      "landUse": -0.025533871,
+      "farm": 0.269618358,
+      "animalFeed": 0,
+      "processing": 0.06014592,
+      "transport": 0.295830362,
+      "retail": 0.020980708,
+      "packaging": 0.065670278,
+      "losses": 0.175184627
+    },
+    "total": 0.8618963820000001
+  },
+  {
+    "entity": "Other Vegetables",
+    "stages": {
+      "landUse": 0.001180576,
+      "farm": 0.176173078,
+      "animalFeed": 0,
+      "processing": 0.060405149,
+      "transport": 0.165549737,
+      "retail": 0.015135273,
+      "packaging": 0.041747507,
+      "losses": 0.071981328
+    },
+    "total": 0.532172648
+  },
+  {
+    "entity": "Brassicas",
+    "stages": {
+      "landUse": 0.002242361,
+      "farm": 0.277745354,
+      "animalFeed": 0,
+      "processing": 0,
+      "transport": 0.094640882,
+      "retail": 0.016843897,
+      "packaging": 0.045303061,
+      "losses": 0.077780876
+    },
+    "total": 0.5145564309999999
+  },
+  {
+    "entity": "Onions & Leeks",
+    "stages": {
+      "landUse": 0.004808972,
+      "farm": 0.211039002,
+      "animalFeed": 0,
+      "processing": 0,
+      "transport": 0.094781878,
+      "retail": 0.039249706,
+      "packaging": 0.044784978,
+      "losses": 0.102098528
+    },
+    "total": 0.4967630639999999
+  },
+  {
+    "entity": "Potatoes",
+    "stages": {
+      "landUse": -0.001315101,
+      "farm": 0.193083415,
+      "animalFeed": 0,
+      "processing": 0,
+      "transport": 0.093867162,
+      "retail": 0.039243544,
+      "packaging": 0.044549374,
+      "losses": 0.090705705
+    },
+    "total": 0.460134099
+  },
+  {
+    "entity": "Nuts",
+    "stages": {
+      "landUse": -3.257812133,
+      "farm": 3.374406815,
+      "animalFeed": 0,
+      "processing": 0.051419528,
+      "transport": 0.106734489,
+      "retail": 0.042638569,
+      "packaging": 0.123747546,
+      "losses": -0.007999532
+    },
+    "total": 0.4331352820000001
+  },
+  {
+    "entity": "Apples",
+    "stages": {
+      "landUse": -0.028951464,
+      "farm": 0.225815762,
+      "animalFeed": 0,
+      "processing": 0.003820138,
+      "transport": 0.095804473,
+      "retail": 0.016577621,
+      "packaging": 0.044526409,
+      "losses": 0.070807865
+    },
+    "total": 0.428400804
+  },
+  {
+    "entity": "Root Vegetables",
+    "stages": {
+      "landUse": 0.013389332,
+      "farm": 0.153994029,
+      "animalFeed": 0,
+      "processing": 0,
+      "transport": 0.113769657,
+      "retail": 0.038855213,
+      "packaging": 0.044662141,
+      "losses": 0.061609681
+    },
+    "total": 0.42628005300000005
+  },
+  {
+    "entity": "Citrus Fruit",
+    "stages": {
+      "landUse": -0.145953655,
+      "farm": 0.306732538,
+      "animalFeed": 0,
+      "processing": 0,
+      "transport": 0.093855317,
+      "retail": 0.016685298,
+      "packaging": 0.044735127,
+      "losses": 0.071570082
+    },
+    "total": 0.387624707
+  }
+]
