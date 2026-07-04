@@ -20,9 +20,10 @@ env/
 ENV/
 .venv/
 
-# Secrets
+# Secrets — real .env is ignored, the template is tracked
 .env
 .env.*
+!.env.example
 
 # Jupyter notebook checkpoints
 .ipynb_checkpoints/
