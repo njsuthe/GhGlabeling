@@ -1,73 +1,87 @@
-# Grocery Item GHG Labeling
+# Grocery carbon labels
 
-A small research project exploring how greenhouse gas (GHG) labels on grocery items could inform shopper choices. I combine public nutrition/food datasets with product-level CO2e intensity estimates and visualize the impacts for different shopper profiles.
+**What if groceries had carbon labels?** Food is responsible for roughly a quarter of global greenhouse-gas emissions, but the climate cost of what lands in a shopping cart is invisible at the shelf. This project takes 76 real products from USDA FoodData Central, matches each to a documented CO₂e intensity estimate, and prints the label the package never had.
 
-## Project Summary
+### [→ View the live site](https://njsuthe.github.io/GhGlabeling/)
 
-- Pull base product and food group data from USDA APIs/datasets.
-- Enrich items with CO2e intensities gathered from Our World in Data, CarbonCloud, and other peer-reviewed or industry sources.
-- Aggregate emissions per item and per basket to show weekly, monthly, and annual GHG impacts.
-- Present insights in a Tableau workbook/slides to illustrate potential label designs and behavior change.
+![The Grocery carbon labels site: two "Carbon facts" labels side by side, comparing ground beef against a plant-based swap that emits 94% less](docs/hero.png)
 
-## Data Sources
+---
 
-- USDA food data (for base item taxonomy and attributes)
-  - FoodData Central API: item metadata and nutrient context
-  - USDA reference groupings for food categories
-- Greenhouse gas intensity references (CO2e per kg/lb/serving)
-  - Our World in Data – food emissions research synthesis
-  - CarbonCloud – product/category-level footprints (where available)
-  - Additional literature/industry reports used to fill gaps
+## What's here
 
-Note: Where multiple sources exist, the project selects a defensible, documented estimate (median/representative value) and records the source for transparency.
+An interactive site that lets you:
 
-## Methodology (High-Level)
+- **Explore** all 76 products as searchable, filterable "Carbon facts" labels — a nutrition-facts pastiche showing CO₂e per package, per kg, and per serving.
+- **Compare swaps** — each conventional product next to the plant-based counterpart sold a few feet away (ground beef → Beyond is −94% per kg).
+- **See the categories** — how food groups rank on GHG intensity (Poore & Nemecek), and which supply-chain stage the emissions actually come from.
+- **Add up baskets** — three shopper profiles extrapolated to weekly, monthly, and annual footprints.
+- **Read the methodology** — every assumption, caveat, and source, with the citation printed on each label.
 
-1. Ingest USDA product and category data via API/flat files.
-2. Normalize and map items to a canonical category (e.g., Beef, Poultry, Dairy, Produce, Grains, Packaged Snacks).
-3. Join/assign CO2e intensities by category or item (kg CO2e per kg; converted to serving sizes where relevant).
-4. Compute per-item CO2e = intensity × quantity (by weight or serving).
-5. Build "baskets" for three example shopper profiles with different mixes of high/low-intensity items.
-6. Aggregate to weekly, monthly, and annual totals per profile.
-7. Export tidy datasets for visualization in Tableau.
+## Two versions
 
-## Visualizations (Tableau)
+This project was first built by hand, then rebuilt — and the history is kept on purpose.
 
-- Food group comparison: average CO2e intensity across major groups
-- Item-level view: distribution and outliers (e.g., ruminant meats vs plant proteins)
-- Shopper profiles: three example weekly baskets → extrapolated to monthly and annual footprints
-- Label mockups: examples of how per-item/receipt-level labeling might look in-store or online
+| Version | Presentation | Where |
+|---|---|---|
+| **v1 (2024)** | Tableau storyboard, assembled manually | [`v1-tableau` release](https://github.com/njsuthe/GhGlabeling/releases/tag/v1-tableau) · PDF in [`legacy/`](legacy/) |
+| **v2 (2026)** | Interactive site (Vite + React) | [`site/`](site/) · [live](https://njsuthe.github.io/GhGlabeling/) |
 
-## How to Reproduce (Outline)
+Both draw on the **same** notebook-prepared, hand-enriched dataset. Only the presentation layer changed.
 
-1. Obtain USDA API key (if using FoodData Central API endpoints).
-2. Run the data pull notebook to fetch and normalize USDA items/categories.
-3. Load or curate the CO2e reference table (OWID, CarbonCloud, other sources) and map to categories/items.
-4. Compute item/basket CO2e and export CSVs for Tableau.
-5. Open the Tableau workbook (or slides) and refresh data sources.
+## Repository layout
 
-This repo contains the core notebook for data preparation; the Tableau artifacts (PDF export provided) show the results and story.
+```
+notebooks/   Data-prep notebook: USDA pull, cleaning, CO₂e enrichment, basket math
+data/        Source + derived CSVs (raw pull, cleaned, hand-enriched, OWID references)
+site/        v2 interactive site (Vite + React), deployed to GitHub Pages
+legacy/      v1 Tableau storyboard (PDF export)
+```
 
-## Repository Contents
+## Running it locally
 
-- `Grocery_Item_GhG_Labeling.ipynb` – data prep/joins, intensity assignment, and basket calculations
-- `Grocery Item GhG Labeling.pdf` – exported slides/storyboard from Tableau (CO2e by group + shopper profiles)
+### The site
 
-## Caveats and Assumptions
+```bash
+cd site
+npm install
+npm run dev          # http://localhost:5173/GhGlabeling/
+```
 
-- Category-level intensities can mask brand/supply-chain variability.
-- Estimates are sensitive to serving size, weight, and preparation assumptions.
-- Some products lack definitive footprints; proxies are used and documented.
-- The goal is comparative guidance, not exact accounting.
+The site reads pre-generated JSON in `site/src/data/`. To regenerate it from the CSVs:
 
-## Potential Extensions
+```bash
+npm run prepare-data
+```
 
-- Add store-level SKU mapping and price signals
-- Include uncertainty bands on item/basket estimates
-- Expand profiles and sensitivity analyses (e.g., seasonal produce, local vs imported)
-- Integrate additional datasets (e.g., Poore & Nemecek, retailer disclosures)
+### The notebook
 
-## License and Attribution
+The notebook only needs to be re-run to refresh the USDA pull; the enriched CSVs are already committed.
 
-- Data and figures derived from sources cited above; please credit USDA, Our World in Data, CarbonCloud, and any additional referenced publications where used.
-- This project is for educational and exploratory purposes.
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+cp .env.example .env     # then add your free USDA key (see below)
+jupyter lab              # open notebooks/Grocery_Item_GhG_Labeling.ipynb
+```
+
+Get a free [FoodData Central API key](https://fdc.nal.usda.gov/api-key-signup.html) and put it in `.env` as `FDC_API_KEY=...`. The notebook loads it automatically via `python-dotenv`; `.env` is gitignored.
+
+## Data & methodology
+
+Product metadata (name, brand, package weight, serving size) comes from the **USDA FoodData Central API** — 76 branded items hand-picked across high- and low-impact food groups, in deliberate conventional/plant-based pairs. Each is matched to a documented greenhouse-gas intensity (kg CO₂e per kg of food), preferring peer-reviewed syntheses and falling back to industry databases where needed. Per-package figures are intensity × package weight.
+
+**Sources**
+
+- Poore, J., & Nemecek, T. (2018). [Reducing food's environmental impacts through producers and consumers](https://www.science.org/doi/10.1126/science.aaq0216). *Science* — primary intensity data, via [Our World in Data](https://ourworldindata.org/environmental-impacts-of-food).
+- [CarbonCloud ClimateHub](https://apps.carboncloud.com/climatehub/) — secondary product/category footprints.
+- Gap-fillers: [Consumer Ecology](https://consumerecology.com/) (alternative beef), [Bianchi et al. 2021](https://link.springer.com/article/10.1007/s11367-020-01817-6) (chocolate), [HEALabel](https://www.healabel.com/) (nuts), [Eat Just](https://www.ju.st/learn) (plant-based egg).
+- Real-world precedent: [Oatly's climate-footprint labels](https://www.bloomberg.com/news/articles/2023-01-31/oatly-launches-climate-footprint-labels-in-the-us).
+
+**Caveats** — Category-level intensities mask brand and supply-chain variability; estimates are sensitive to serving-size and weight assumptions; some products use documented proxies. The goal is comparative guidance for shoppers, not exact carbon accounting.
+
+## Credits
+
+Built by [Nicholas Sutherland](https://www.linkedin.com/in/nicholasjsutherland/). Data from USDA FoodData Central, Our World in Data, CarbonCloud, and the sources cited above. For educational and exploratory purposes; please credit the underlying data providers where used.
