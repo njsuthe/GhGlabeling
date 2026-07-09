@@ -35,11 +35,14 @@ function Modal({ item, onClose }) {
   )
 }
 
+const COLLAPSED_COUNT = 12
+
 export default function Explore() {
   const [query, setQuery] = useState('')
   const [level, setLevel] = useState('all')
   const [sort, setSort] = useState('intensity-desc')
   const [selected, setSelected] = useState(null)
+  const [expanded, setExpanded] = useState(false)
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
@@ -53,6 +56,11 @@ export default function Explore() {
       })
       .sort(SORTS[sort].fn)
   }, [query, level, sort])
+
+  // Cap the default view; a search or level filter shows all matches directly.
+  const isFiltered = query.trim() !== '' || level !== 'all'
+  const showAll = expanded || isFiltered
+  const visible = showAll ? filtered : filtered.slice(0, COLLAPSED_COUNT)
 
   return (
     <section className="section" id="explore">
@@ -96,7 +104,7 @@ export default function Explore() {
           </select>
         </div>
         <div className="item-grid">
-          {filtered.map((it) => {
+          {visible.map((it) => {
             const lv = impactLevel(it.kgCO2e)
             return (
               <button key={it.fdcId} className="item-card" onClick={() => setSelected(it)}>
@@ -112,8 +120,13 @@ export default function Explore() {
             )
           })}
         </div>
+        {!isFiltered && filtered.length > COLLAPSED_COUNT && (
+          <button className="show-more" onClick={() => setExpanded(!expanded)}>
+            {expanded ? 'Show fewer' : `Show all ${filtered.length} items`}
+          </button>
+        )}
         <p className="explore-count">
-          Showing {filtered.length} of {items.length} items · intensity color:{' '}
+          Showing {visible.length} of {items.length} items · intensity color:{' '}
           <span className="dot low" /> under 5 · <span className="dot medium" /> 5–20 ·{' '}
           <span className="dot high" /> 20+ kg CO₂e per kg
         </p>
