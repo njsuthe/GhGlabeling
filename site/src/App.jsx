@@ -20,10 +20,18 @@ export default function App() {
       </main>
       <footer className="footer">
         <div className="container">
-          Built by{' '}
-          <a href="https://www.linkedin.com/in/nicholasjsutherland/">Nicholas Sutherland</a> ·
-          data from USDA FoodData Central, Our World in Data, CarbonCloud and cited sources ·{' '}
-          <a href="https://github.com/njsuthe/GhGlabeling">source on GitHub</a>
+          <p className="recognition">
+            <span className="award-star" aria-hidden="true">★</span> Recognized as{' '}
+            <strong>Best Overall</strong> and <strong>Most Polished</strong> in the{' '}
+            <a href="https://softwarexclimate.com/showcase">Terra.do Software x Climate</a>{' '}
+            January 2024 cohort.
+          </p>
+          <p className="footer-credit">
+            Built by{' '}
+            <a href="https://www.linkedin.com/in/nicholasjsutherland/">Nicholas Sutherland</a> ·
+            data from USDA FoodData Central, Our World in Data, CarbonCloud and cited sources ·{' '}
+            <a href="https://github.com/njsuthe/GhGlabeling">source on GitHub</a>
+          </p>
         </div>
       </footer>
     </>

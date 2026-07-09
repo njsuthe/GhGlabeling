@@ -11,6 +11,14 @@ const PERIODS = [
   ['annual', 'Annual', 52],
 ]
 
+// Relative footprint color across the three shoppers (highest → lowest),
+// echoing the Swaps section's red/amber/green language.
+const FOOTPRINT_COLOR = {
+  a: 'var(--red)',
+  b: 'var(--amber)',
+  c: 'var(--green)',
+}
+
 export default function Baskets() {
   const [period, setPeriod] = useState('annual')
   const factor = PERIODS.find(([k]) => k === period)[2]
@@ -32,7 +40,7 @@ export default function Baskets() {
     <section className="section" id="baskets">
       <div className="container">
         <p className="section-kicker">Baskets</p>
-        <h2>Three shoppers, one year</h2>
+        <h2>Three shoppers, three footprints</h2>
         <p className="section-intro">
           Rebuilt from the original project's shopper profiles: each basket is one package of
           every listed item per week, extrapolated out. The gap between an average cart and a
@@ -57,7 +65,7 @@ export default function Baskets() {
               <div className="basket-card" key={b.id}>
                 <h3>{b.name}</h3>
                 <p className="basket-blurb">{b.blurb}</p>
-                <div className="basket-total">
+                <div className="basket-total" style={{ color: FOOTPRINT_COLOR[b.id] }}>
                   {fmt(total, 0)}
                   <span className="unit">kg CO₂e</span>
                 </div>
