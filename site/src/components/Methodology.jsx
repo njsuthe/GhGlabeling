@@ -96,7 +96,13 @@ export default function Methodology() {
             <a href="https://github.com/njsuthe/GhGlabeling/releases/tag/v1-tableau">
               preserved as the v1-tableau release
             </a>
-            . Version 2 (2026) rebuilds the presentation as this interactive site, with the same
+            . It was recognized as <strong>Best Overall</strong> and <strong>Most Polished</strong>{' '}
+            project in the{' '}
+            <a href="https://softwarexclimate.com/showcase">Terra.do Software x Climate</a> January
+            2024 cohort.
+          </p>
+          <p className="fine">
+            Version 2 (2026) rebuilds the presentation as this interactive site, with the same
             data and methodology.
           </p>
         </div>

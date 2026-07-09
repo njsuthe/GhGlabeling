@@ -743,23 +743,3 @@ a {
 .footer a {
   color: var(--ink-soft);
 }
-
-.recognition {
-  color: var(--ink-soft);
-  margin: 0 0 10px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--hairline);
-}
-
-.recognition strong {
-  color: var(--ink);
-  font-weight: 600;
-}
-
-.recognition .award-star {
-  color: var(--amber);
-}
-
-.footer-credit {
-  margin: 0;
-}
